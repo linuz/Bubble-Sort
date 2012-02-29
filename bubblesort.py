@@ -2,7 +2,7 @@
 #############################################################
 # Bubblesort for Python                                     #
 # by: Dennis Linuz <dennismald@gmail.com>                   #
-# Demonstration of a bubble 		                        #
+# Demonstration of a bubble 		                    #
 #############################################################
 
 import sys,time
