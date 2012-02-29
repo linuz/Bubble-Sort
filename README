@@ -1,0 +1,4 @@
+Just a simple demonstration of a bubble sort algorithm <http://en.wikipedia.org/wiki/Bubble_sort>
+
+Input the items in a list as arguments.
+Example: ./bubblesort.py <item1> [item2] [item3] [item4] ...
