@@ -26,8 +26,8 @@ def bubbleSort(array):
 		result = False #after one pass result becomes false hence program starts scanning begining
 		i=0
 		while (i < length-1):
-			if (array[i] > array[i+1]):	# starts sorting first 2 valuesfrom start of array.
-				tempVar = array[i]  	#tempVar is used for swapping.
+			if (array[i] < array[i+1]):	# starts sorting first 2 valuesfrom start of array.
+				tempVar = array[i+1]  	#tempVar is used for swapping.
 				array[i] = array[i+1]
 				array[i+1] = tempVar    #if first element is larger than second element then swapping is done.
 				result = True
