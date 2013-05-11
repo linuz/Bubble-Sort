@@ -42,4 +42,4 @@ print ""
 print "Sorted after " + str(count) + " tries."
 print "Sorted:  " + arrayResult 
 print "---"
-print "Overall Time: " + str(time.time()-time1) + " seconds"	
+print "Overall Time: " + str(time.time()-time1) + " seconds"	#time required for bubble sorting.
