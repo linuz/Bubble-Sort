@@ -23,7 +23,7 @@ def bubbleSort(array):
 	result = True
 	global count
 	while result:
-		result = False #after one pass result becomes false hence program starts scanning begining
+		result = False 
 		i=0
 		while (i < length-1):
 			if (array[i] < array[i+1]):	# starts sorting first 2 valuesfrom start of array.
@@ -42,4 +42,4 @@ print ""
 print "Sorted after " + str(count) + " tries."
 print "Sorted:  " + arrayResult 
 print "---"
-print "Overall Time: " + str(time.time()-time1) + " seconds"	#time required for bubble sorting.
+print "Overall Time: " + str(time.time()-time1) + " seconds"	
