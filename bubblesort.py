@@ -5,41 +5,32 @@
 # Demonstration of a bubble 		                    #
 #############################################################
 
-import sys,time
-
-input_array=[]
-if (len(sys.argv) < 2):
-    print ""
-    print "Please input list items as arguments"
-    print "\nExample: ./bubblesort.py <item1> [item2] [item3] [item4] ..."
-    quit()
-i=1
-while (i < len(sys.argv)):
-    input_array.append(int(sys.argv[i]))
-    i+=1
+import sys
+import time
 
 def bubbleSort(array):
-	length=len(array)
-	result = True
-	global count
-	while result:
-		result = False
-		i=0
-		while (i < length-1):
-			if (array[i] > array[i+1]):
-				tempVar = array[i]
-				array[i] = array[i+1]
-				array[i+1] = tempVar
-				result = True
-			i=i+1
-			count+=1
-			print "Sorting: " + str(array)
-	return array
-count = 0
-time1 = time.time()
-arrayResult = str(bubbleSort(input_array))
-print ""
-print "Sorted after " + str(count) + " tries."
-print "Sorted:  " + arrayResult 
-print "---"
-print "Overall Time: " + str(time.time()-time1) + " seconds"
+    length = len(array)
+    count = 0
+    for i in range(length):
+        swapped = False
+        for j in range(0, length-i-1):
+            if array[j] > array[j+1]:
+                array[j], array[j+1] = array[j+1], array[j]
+                swapped = True
+            count += 1
+        if not swapped:
+            break
+    return array, count
+
+if len(sys.argv) < 2:
+    print("Please input list items as arguments")
+    print("Example: ./bubblesort.py <item1> [item2] [item3] [item4] ...")
+    sys.exit(1)
+
+input_array = [int(arg) for arg in sys.argv[1:]]
+sorted_array, count = bubbleSort(input_array)
+
+print("Sorted after", count, "tries.")
+print("Sorted:", sorted_array)
+print("---")
+print("Overall Time:", time.process_time(), "seconds")
